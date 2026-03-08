@@ -4,8 +4,7 @@ import { Footer } from './components/Footer';
 import { Hero } from './sections/Hero';
 import { FeaturedProducts } from './sections/FeaturedProducts';
 import { QualityStandards } from './sections/QualityStandards';
-import { TrendyolCTA } from './sections/TrendyolCTA';
-import { InstagramCTA } from './sections/InstagramCTA';
+import { CombinedCTA } from './sections/CombinedCTA';
 import { AboutStory } from './sections/AboutStory';
 import { Mission } from './sections/Mission';
 import { Certificates } from './sections/Certificates';
@@ -31,8 +30,7 @@ export default function App() {
               <Hero />
               <FeaturedProducts />
               <QualityStandards />
-              <TrendyolCTA />
-              <InstagramCTA />
+              <CombinedCTA />
             </motion.div>
           )}
           {currentPage === 'about' && (
@@ -46,8 +44,7 @@ export default function App() {
               <AboutStory />
               <Mission />
               <QualityStandards />
-              <TrendyolCTA />
-              <InstagramCTA />
+              <CombinedCTA />
             </motion.div>
           )}
           {currentPage === 'certificates' && (
@@ -59,8 +56,7 @@ export default function App() {
               transition={{ duration: 0.3 }}
             >
               <Certificates />
-              <TrendyolCTA />
-              <InstagramCTA />
+              <CombinedCTA />
             </motion.div>
           )}
         </AnimatePresence>
