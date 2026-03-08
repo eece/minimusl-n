@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Hero } from './sections/Hero';
@@ -11,54 +11,53 @@ import { Certificates } from './sections/Certificates';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'certificates'>('home');
+  const location = useLocation();
 
   return (
     <div className="min-h-screen flex flex-col bg-background-light">
-      <Header onNavigate={setCurrentPage} currentPage={currentPage} />
+      <Header />
       
       <main className="flex-grow">
         <AnimatePresence mode="wait">
-          {currentPage === 'home' && (
-            <motion.div
-              key="home"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Hero />
-              <FeaturedProducts />
-              <QualityStandards />
-              <CombinedCTA />
-            </motion.div>
-          )}
-          {currentPage === 'about' && (
-            <motion.div
-              key="about"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <AboutStory />
-              <Mission />
-              <QualityStandards />
-              <CombinedCTA />
-            </motion.div>
-          )}
-          {currentPage === 'certificates' && (
-            <motion.div
-              key="certificates"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Certificates />
-              <CombinedCTA />
-            </motion.div>
-          )}
+          <Routes location={location}>
+            <Route path="/" element={
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Hero />
+                <FeaturedProducts />
+                <QualityStandards />
+                <CombinedCTA />
+              </motion.div>
+            } />
+            <Route path="/about" element={
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <AboutStory />
+                <Mission />
+                <QualityStandards />
+                <CombinedCTA />
+              </motion.div>
+            } />
+            <Route path="/certificates" element={
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Certificates />
+                <CombinedCTA />
+              </motion.div>
+            } />
+          </Routes>
         </AnimatePresence>
       </main>
 

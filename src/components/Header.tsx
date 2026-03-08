@@ -1,44 +1,46 @@
 import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { ShoppingBag, Baby, MessageCircle } from 'lucide-react';
 
-interface HeaderProps {
-  onNavigate: (page: 'home' | 'about' | 'certificates') => void;
-  currentPage: string;
-}
-
-export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
+export const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md px-4 md:px-10 py-4">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between">
-        <button 
-          onClick={() => onNavigate('home')}
+        <Link 
+          to="/"
           className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
           <div className="text-primary">
             <Baby className="w-8 h-8" />
           </div>
           <h1 className="text-xl font-bold tracking-tight text-slate-900">MiniMüslin</h1>
-        </button>
+        </Link>
         
         <nav className="hidden md:flex items-center gap-8">
-          <button 
-            onClick={() => onNavigate('home')}
-            className={`text-sm font-medium transition-colors ${currentPage === 'home' ? 'text-primary' : 'hover:text-primary'}`}
+          <NavLink 
+            to="/"
+            className={({ isActive }) => 
+              `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
+            }
           >
             Koleksiyonlar
-          </button>
-          <button 
-            onClick={() => onNavigate('about')}
-            className={`text-sm font-medium transition-colors ${currentPage === 'about' ? 'text-primary' : 'hover:text-primary'}`}
+          </NavLink>
+          <NavLink 
+            to="/about"
+            className={({ isActive }) => 
+              `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
+            }
           >
             Hakkımızda
-          </button>
-          <button 
-            onClick={() => onNavigate('certificates')}
-            className={`text-sm font-medium transition-colors ${currentPage === 'certificates' ? 'text-primary' : 'hover:text-primary'}`}
+          </NavLink>
+          <NavLink 
+            to="/certificates"
+            className={({ isActive }) => 
+              `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
+            }
           >
             Sertifikalar
-          </button>
+          </NavLink>
         </nav>
 
         <div className="flex items-center gap-4">

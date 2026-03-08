@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Baby, Mail, MapPin, Instagram, Facebook, Twitter, MessageCircle, Phone } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -7,10 +8,10 @@ export const Footer: React.FC = () => {
       <div className="mx-auto max-w-[1200px] px-4 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="space-y-4">
-            <div className="flex items-center gap-3 text-primary">
+            <Link to="/" className="flex items-center gap-3 text-primary hover:opacity-80 transition-opacity">
               <Baby className="w-8 h-8" />
               <h1 className="text-xl font-bold text-slate-900">MiniMüslin</h1>
-            </div>
+            </Link>
             <p className="text-sm text-slate-500">
               Bebekleriniz için en doğal ve en yumuşak müslin ürünleri tasarlıyoruz.
             </p>
@@ -22,11 +23,11 @@ export const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h5 className="font-bold mb-4">Hızlı Bağlantılar</h5>
+            <h5 className="font-bold mb-4">Kurumsal</h5>
             <ul className="space-y-2 text-sm text-slate-500">
-              <li><a className="hover:text-primary transition-colors" href="#">Mağaza</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Yeni Gelenler</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Blog</a></li>
+              <li><Link className="hover:text-primary transition-colors" to="/">Koleksiyonlar</Link></li>
+              <li><Link className="hover:text-primary transition-colors" to="/about">Hakkımızda</Link></li>
+              <li><Link className="hover:text-primary transition-colors" to="/certificates">Sertifikalar</Link></li>
             </ul>
           </div>
           
