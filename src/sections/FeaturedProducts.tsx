@@ -13,26 +13,26 @@ const products = [
     id: 1,
     name: "'Sleepy Jungle' Puset Örtüsü",
     category: "%100 Pamuk Müslin",
-    image: "https://images.unsplash.com/photo-1591084728795-1149f32d9866?auto=format&fit=crop&q=80&w=600",
+    image: "https://cdn.dsmcdn.com/mnresize/620/920/ty1833/prod/QC_PREP/20260306/00/8fd09139-2b15-3118-bd18-1ebe29ae682f/1_org_zoom.jpg",
   },
   {
     id: 2,
     name: "'Bebe Mavi' 4 Katlı Battaniye",
     category: "Ekstra Yumuşak Doku",
-    image: "https://images.unsplash.com/photo-1544126592-807daa2b567b?auto=format&fit=crop&q=80&w=600",
+    image: "https://cdn.dsmcdn.com/mnresize/620/920/ty1835/prod/QC_PREP/20260306/00/b29f0028-6092-38ef-82fb-29718953916a/1_org_zoom.jpg",
   },
   {
     id: 3,
-    name: "'Mint Bunny' Emzirme Örtüsü",
-    category: "Konforlu Tasarım",
-    image: "https://images.unsplash.com/photo-1515488764276-beab7607c1e6?auto=format&fit=crop&q=80&w=600",
+    name: "'Sleepy Jungle' Puset Örtüsü",
+    category: "%100 Pamuk Müslin",
+    image: "https://cdn.dsmcdn.com/mnresize/620/920/ty1833/prod/QC_PREP/20260306/00/8fd09139-2b15-3118-bd18-1ebe29ae682f/1_org_zoom.jpg",
   },
   {
     id: 4,
-    name: "'Soft Sand' Kundak Seti",
-    category: "Doğal Boyama",
-    image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=600",
-  }
+    name: "'Bebe Mavi' 4 Katlı Battaniye",
+    category: "Ekstra Yumuşak Doku",
+    image: "https://cdn.dsmcdn.com/mnresize/620/920/ty1835/prod/QC_PREP/20260306/00/b29f0028-6092-38ef-82fb-29718953916a/1_org_zoom.jpg",
+  },
 ];
 
 export const FeaturedProducts: React.FC = () => {
@@ -65,10 +65,11 @@ export const FeaturedProducts: React.FC = () => {
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000 }}
           breakpoints={{
-            640: { slidesPerView: 2 },
+            640: { slidesPerView: 1 },
             1024: { slidesPerView: 3 },
           }}
-          className="pb-12"
+          className="pb-32"
+          style={{ '--swiper-pagination-bottom': '-1px', 'paddingBottom':'32px', '--swiper-pagination-color': '#d2b38e' }}
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>

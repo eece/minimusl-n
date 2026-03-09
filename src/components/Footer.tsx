@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-primary/10 text-center text-sm text-slate-400">
-          © 2024 MiniMüslin. Tüm hakları saklıdır.
+          © 2026 MiniMüslin. Tüm hakları saklıdır.
         </div>
       </div>
     </footer>

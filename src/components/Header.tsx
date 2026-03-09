@@ -17,19 +17,19 @@ export const Header: React.FC = () => {
         
         <nav className="hidden md:flex items-center gap-8">
           <a 
-            href="/"
+            href="./"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Koleksiyonlar
           </a>
           <a 
-            href="/about"
+            href="./about"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Hakkımızda
           </a>
           <a 
-            href="/certificates"
+            href="./certificates"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Sertifikalar
