@@ -2,11 +2,19 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig, loadEnv} from 'vite';
+import vike from 'vike/plugin';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    plugins: [react(), tailwindcss()],
+    base: '/', // GitHub Pages'ta alt klasÃ¶re yÃ¼klenecekse '/repo-adi/' yapÄ±n
+    plugins: [
+      react(), 
+      tailwindcss(),
+      vike({
+        prerender: true
+      })
+    ],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -10,7 +11,7 @@ import { Mission } from './sections/Mission';
 import { Certificates } from './sections/Certificates';
 import { motion, AnimatePresence } from 'motion/react';
 
-export default function App() {
+export default function AppWrapper() {
   const location = useLocation();
 
   return (

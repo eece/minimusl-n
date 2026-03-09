@@ -1,46 +1,39 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
 import { ShoppingBag, Baby, MessageCircle } from 'lucide-react';
 
 export const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md px-4 md:px-10 py-4">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between">
-        <Link 
-          to="/"
+        <a 
+          href="/"
           className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
           <div className="text-primary">
             <Baby className="w-8 h-8" />
           </div>
           <h1 className="text-xl font-bold tracking-tight text-slate-900">MiniMüslin</h1>
-        </Link>
+        </a>
         
         <nav className="hidden md:flex items-center gap-8">
-          <NavLink 
-            to="/"
-            className={({ isActive }) => 
-              `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
-            }
+          <a 
+            href="/"
+            className="text-sm font-medium transition-colors hover:text-primary"
           >
             Koleksiyonlar
-          </NavLink>
-          <NavLink 
-            to="/about"
-            className={({ isActive }) => 
-              `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
-            }
+          </a>
+          <a 
+            href="/about"
+            className="text-sm font-medium transition-colors hover:text-primary"
           >
             Hakkımızda
-          </NavLink>
-          <NavLink 
-            to="/certificates"
-            className={({ isActive }) => 
-              `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
-            }
+          </a>
+          <a 
+            href="/certificates"
+            className="text-sm font-medium transition-colors hover:text-primary"
           >
             Sertifikalar
-          </NavLink>
+          </a>
         </nav>
 
         <div className="flex items-center gap-4">
