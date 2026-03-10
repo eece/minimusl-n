@@ -1,0 +1,13 @@
+Key,Value
+header.logoText,MiniMüslin
+header.navLinks,"[{""name"": ""Koleksiyonlar"", ""href"": ""./""}, {""name"": ""Hakkımızda"", ""href"": ""./about""}, {""name"": ""Sertifikalar"", ""href"": ""./certificates""}]"
+header.shopLink,https://www.shopier.com/minimuslin
+header.whatsappNumber,+90 500 000 00 00
+header.whatsappLink,https://wa.me/905000000000
+header.email,info@minimuslin.com
+header.instagramLink,https://instagram.com/minimuslin
+footer.description,Bebekleriniz için en doğal ve en yumuşak müslin ürünleri tasarlıyoruz.
+footer.copyright,"© 2026 MiniMüslin. Tüm hakları saklıdır."
+footer.socialLinks.instagram,https://instagram.com/minimuslin
+footer.socialLinks.facebook,#
+footer.socialLinks.twitter,#

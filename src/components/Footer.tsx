@@ -1,7 +1,27 @@
 import React from 'react';
 import { Baby, Mail, MapPin, Instagram, Facebook, Twitter, MessageCircle, Phone } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  logoText?: string;
+  description?: string;
+  copyright?: string;
+  socialLinks?: {
+    instagram?: string;
+    facebook?: string;
+    twitter?: string;
+  };
+}
+
+export const Footer: React.FC<FooterProps> = ({
+  logoText = "MiniMüslin",
+  description = "Bebekleriniz için en doğal ve en yumuşak müslin ürünleri tasarlıyoruz.",
+  copyright = "© 2026 MiniMüslin. Tüm hakları saklıdır.",
+  socialLinks = {
+    instagram: "https://instagram.com/minimuslin",
+    facebook: "#",
+    twitter: "#"
+  }
+}) => {
   return (
     <footer className="bg-background-light border-t border-primary/10 py-12">
       <div className="mx-auto max-w-[1200px] px-4 md:px-10">
@@ -9,15 +29,15 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <a href="/" className="flex items-center gap-3 text-primary hover:opacity-80 transition-opacity">
               <Baby className="w-8 h-8" />
-              <h1 className="text-xl font-bold text-slate-900">MiniMüslin</h1>
+              <h1 className="text-xl font-bold text-slate-900">{logoText}</h1>
             </a>
             <p className="text-sm text-slate-500">
-              Bebekleriniz için en doğal ve en yumuşak müslin ürünleri tasarlıyoruz.
+              {description}
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-primary hover:opacity-70 transition-opacity"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="text-primary hover:opacity-70 transition-opacity"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="text-primary hover:opacity-70 transition-opacity"><Twitter className="w-5 h-5" /></a>
+              <a href={socialLinks.instagram} className="text-primary hover:opacity-70 transition-opacity"><Instagram className="w-5 h-5" /></a>
+              <a href={socialLinks.facebook} className="text-primary hover:opacity-70 transition-opacity"><Facebook className="w-5 h-5" /></a>
+              <a href={socialLinks.twitter} className="text-primary hover:opacity-70 transition-opacity"><Twitter className="w-5 h-5" /></a>
             </div>
           </div>
           
@@ -60,7 +80,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-primary/10 text-center text-sm text-slate-400">
-          © 2026 MiniMüslin. Tüm hakları saklıdır.
+          {copyright}
         </div>
       </div>
     </footer>

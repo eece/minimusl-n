@@ -2,7 +2,29 @@ import React, { useState, useEffect } from 'react';
 import { ShoppingBag, Baby, MessageCircle, Menu, X, Instagram, Phone, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  logoText?: string;
+  navLinks?: Array<{ name: string; href: string }>;
+  shopLink?: string;
+  whatsappNumber?: string;
+  whatsappLink?: string;
+  email?: string;
+  instagramLink?: string;
+}
+
+export const Header: React.FC<HeaderProps> = ({
+  logoText = "MiniMüslin",
+  navLinks = [
+    { name: 'Koleksiyonlar', href: './' },
+    { name: 'Hakkımızda', href: './about' },
+    { name: 'Sertifikalar', href: './certificates' },
+  ],
+  shopLink = "https://www.shopier.com/minimuslin",
+  whatsappNumber = "+90 500 000 00 00",
+  whatsappLink = "https://wa.me/905000000000",
+  email = "info@minimuslin.com",
+  instagramLink = "https://instagram.com/minimuslin"
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -19,12 +41,6 @@ export const Header: React.FC = () => {
     };
   }, [isMenuOpen]);
 
-  const navLinks = [
-    { name: 'Koleksiyonlar', href: './' },
-    { name: 'Hakkımızda', href: './about' },
-    { name: 'Sertifikalar', href: './certificates' },
-  ];
-
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md px-4 md:px-10 py-4">
@@ -36,7 +52,7 @@ export const Header: React.FC = () => {
             <div className="text-primary">
               <Baby className="w-8 h-8" />
             </div>
-            <h1 className="text-xl font-bold tracking-tight text-slate-900">MiniMüslin</h1>
+            <h1 className="text-xl font-bold tracking-tight text-slate-900">{logoText}</h1>
           </a>
           
           <nav className="hidden md:flex items-center gap-8">
@@ -57,7 +73,7 @@ export const Header: React.FC = () => {
               <span className="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
             </button>
             <a 
-              href="https://wa.me/905000000000" 
+              href={whatsappLink} 
               target="_blank" 
               rel="noopener noreferrer"
               className="hidden md:flex p-2 bg-green-500 hover:bg-green-600 text-white rounded-full transition-colors items-center justify-center"
@@ -91,7 +107,7 @@ export const Header: React.FC = () => {
             <div className="flex justify-between items-center mb-12">
               <div className="flex items-center gap-3 text-primary">
                 <Baby className="w-8 h-8" />
-                <span className="text-xl font-bold text-slate-900">MiniMüslin</span>
+                <span className="text-xl font-bold text-slate-900">{logoText}</span>
               </div>
               <button 
                 onClick={toggleMenu}
@@ -113,7 +129,7 @@ export const Header: React.FC = () => {
                 </a>
               ))}
               <a 
-                href="https://www.shopier.com/minimuslin" 
+                href={shopLink} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-2xl font-semibold text-primary hover:opacity-80 transition-opacity"
@@ -126,20 +142,20 @@ export const Header: React.FC = () => {
               <div className="space-y-4">
                 <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400">İletişim</h3>
                 <div className="space-y-3">
-                  <a href="tel:+905000000000" className="flex items-center gap-3 text-slate-600 hover:text-primary transition-colors">
+                  <a href={`tel:${whatsappNumber.replace(/\s/g, '')}`} className="flex items-center gap-3 text-slate-600 hover:text-primary transition-colors">
                     <Phone className="w-5 h-5" />
-                    <span>+90 500 000 00 00</span>
+                    <span>{whatsappNumber}</span>
                   </a>
-                  <a href="mailto:info@minimuslin.com" className="flex items-center gap-3 text-slate-600 hover:text-primary transition-colors">
+                  <a href={`mailto:${email}`} className="flex items-center gap-3 text-slate-600 hover:text-primary transition-colors">
                     <Mail className="w-5 h-5" />
-                    <span>info@minimuslin.com</span>
+                    <span>{email}</span>
                   </a>
                 </div>
               </div>
 
               <div className="flex gap-6">
                 <a 
-                  href="https://instagram.com/minimuslin" 
+                  href={instagramLink} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 bg-slate-100 hover:bg-primary/10 text-primary rounded-full transition-all"
@@ -147,7 +163,7 @@ export const Header: React.FC = () => {
                   <Instagram className="w-6 h-6" />
                 </a>
                 <a 
-                  href="https://wa.me/905000000000" 
+                  href={whatsappLink} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 bg-green-500 hover:bg-green-600 text-white rounded-full transition-all"

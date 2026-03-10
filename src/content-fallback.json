@@ -1,0 +1,118 @@
+{
+  "site-settings": {
+    "header": {
+      "logoText": "MiniMüslin",
+      "navLinks": [
+        { "name": "Koleksiyonlar", "href": "./" },
+        { "name": "Hakkımızda", "href": "./about" },
+        { "name": "Sertifikalar", "href": "./certificates" }
+      ],
+      "shopLink": "https://www.shopier.com/minimuslin",
+      "whatsappNumber": "+90 500 000 00 00",
+      "whatsappLink": "https://wa.me/905000000000",
+      "email": "info@minimuslin.com",
+      "instagramLink": "https://instagram.com/minimuslin"
+    },
+    "footer": {
+      "description": "Bebekleriniz için en doğal ve en yumuşak müslin ürünleri tasarlıyoruz.",
+      "copyright": "© 2026 MiniMüslin. Tüm hakları saklıdır.",
+      "socialLinks": {
+        "instagram": "https://instagram.com/minimuslin",
+        "facebook": "#",
+        "twitter": "#"
+      }
+    }
+  },
+  "index": {
+    "hero": {
+      "title": "Doğal ve Yumuşak Dokunuş",
+      "description": "Bebeğiniz için OEKO-TEX sertifikalı, %100 pamuklu müslin ürünler.",
+      "buttonText": "Hemen Keşfet",
+      "backgroundImage": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=1200"
+    },
+    "featuredProducts": {
+      "title": "Öne Çıkan Koleksiyonlar",
+      "products": [
+        {
+          "id": 1,
+          "name": "'Sleepy Jungle' Puset Örtüsü",
+          "category": "%100 Pamuk Müslin",
+          "image": "https://cdn.dsmcdn.com/mnresize/620/920/ty1833/prod/QC_PREP/20260306/00/8fd09139-2b15-3118-bd18-1ebe29ae682f/1_org_zoom.jpg",
+          "link": "https://www.trendyol.com/magaza/minimuslin-m-966952"
+        },
+        {
+          "id": 2,
+          "name": "'Bebe Mavi' 4 Katlı Battaniye",
+          "category": "Ekstra Yumuşak Doku",
+          "image": "https://cdn.dsmcdn.com/mnresize/620/920/ty1835/prod/QC_PREP/20260306/00/b29f0028-6092-38ef-82fb-29718953916a/1_org_zoom.jpg",
+          "link": "https://www.trendyol.com/magaza/minimuslin-m-966952"
+        },
+        {
+          "id": 3,
+          "name": "'Sleepy Jungle' Puset Örtüsü",
+          "category": "%100 Pamuk Müslin",
+          "image": "https://cdn.dsmcdn.com/mnresize/620/920/ty1833/prod/QC_PREP/20260306/00/8fd09139-2b15-3118-bd18-1ebe29ae682f/1_org_zoom.jpg",
+          "link": "https://www.trendyol.com/magaza/minimuslin-m-966952"
+        },
+        {
+          "id": 4,
+          "name": "'Bebe Mavi' 4 Katlı Battaniye",
+          "category": "Ekstra Yumuşak Doku",
+          "image": "https://cdn.dsmcdn.com/mnresize/620/920/ty1835/prod/QC_PREP/20260306/00/b29f0028-6092-38ef-82fb-29718953916a/1_org_zoom.jpg",
+          "link": "https://www.trendyol.com/magaza/minimuslin-m-966952"
+        }
+      ]
+    },
+    "qualityStandards": {
+      "title": "Kalite Standartlarımız",
+      "subtitle": "MiniMüslin olarak bebeğinizin sağlığını her şeyin önünde tutuyoruz.",
+      "items": [
+        {
+          "icon": "ShieldCheck",
+          "title": "OEKO-TEX Sertifikalı",
+          "content": "Uluslararası güvenlik standartlarına uygun, kimyasal içermeyen üretim."
+        },
+        {
+          "icon": "Leaf",
+          "title": "%100 Pamuk",
+          "content": "En yumuşak dokunuş için özenle seçilmiş, tamamen doğal saf pamuk."
+        },
+        {
+          "icon": "Wind",
+          "title": "Nefes Alan Doku",
+          "content": "Terlemeyi önleyen ve ısıyı dengeleyen özel nefes alabilir dokuma yapısı."
+        }
+      ]
+    }
+  },
+  "about": {
+    "story": {
+      "title": "Hikayemiz",
+      "content1": "MiniMüslin, en saf kumaşları arayan bir ebeveynin hayaliyle başladı. Her dokunuşun bir annenin kucağı kadar yumuşak olduğu bir dünya yaratmak istedik.",
+      "content2": "Sentetik karışımlardan ve sert boyalardan uzak durarak, en iyi GOTS sertifikalı organik pamuk üreticilerini bulmak için yola çıktık. Kendi bebeğimiz için küçük bir proje olarak başlayan bu yolculuk, saflığı tüm ailelerle paylaşma misyonuna dönüştü.",
+      "image": "https://images.unsplash.com/photo-1544126592-807daa2b567b?auto=format&fit=crop&q=80&w=800"
+    }
+  },
+  "certificates": {
+    "title": "Sertifikalarımız",
+    "description": "Bebekleriniz için en güvenli ve en doğal üretim standartlarını takip ediyoruz.",
+    "section1": {
+      "title": "OEKO-TEX Standard 100",
+      "description": "Dünyanın en bilinen tekstil etiketlerinden biri olan OEKO-TEX Standard 100, ürünlerimizin her bir bileşeninin zararlı maddeler için test edildiğini ve bu nedenle ekolojik olarak güvenli olduğunu garanti eder.",
+      "listItems": ["Zararlı kimyasallar içermez", "Bebek cildi için güvenlidir", "Uluslararası standartlara uygundur", "Sürdürülebilir üretim süreçleri"],
+      "icon": "ShieldCheck"
+    },
+    "section2": {
+      "title": "GOTS (Global Organic Textile Standard)",
+      "description": "GOTS, ham maddenin hasadından, çevresel ve sosyal sorumluluk sahibi üretime ve etiketlemeye kadar tekstil ürünlerinin organik statüsünü garanti eden, dünya çapında lider tekstil işleme standardıdır.",
+      "listItems": ["%100 Organik pamuk kullanımı", "Çevresel sürdürülebilirlik", "Adil çalışma koşulları", "İzlenebilir tedarik zinciri"],
+      "icon": "Award"
+    },
+    "section3": {
+      "title": "ISO 9001 Kalite Yönetimi",
+      "description": "Üretim süreçlerimizin her aşamasında kaliteyi ön planda tutuyoruz. ISO 9001 sertifikamız, müşteri memnuniyetini artırmak ve sürekli iyileştirme sağlamak için kurduğumuz sistemin bir kanıtıdır.",
+      "listItems": ["Sürekli iyileştirme prensibi", "Müşteri odaklı yaklaşım", "Standartlaştırılmış üretim", "Yüksek verimlilik ve kalite"],
+      "icon": "CheckCircle"
+    }
+  }
+}

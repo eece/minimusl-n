@@ -1,7 +1,19 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-export const AboutStory: React.FC = () => {
+interface AboutStoryProps {
+  title?: string;
+  content1?: string;
+  content2?: string;
+  image?: string;
+}
+
+export const AboutStory: React.FC<AboutStoryProps> = ({
+  title = "Hikayemiz",
+  content1 = "MiniMüslin, en saf kumaşları arayan bir ebeveynin hayaliyle başladı. Her dokunuşun bir annenin kucağı kadar yumuşak olduğu bir dünya yaratmak istedik.",
+  content2 = "Sentetik karışımlardan ve sert boyalardan uzak durarak, en iyi GOTS sertifikalı organik pamuk üreticilerini bulmak için yola çıktık. Kendi bebeğimiz için küçük bir proje olarak başlayan bu yolculuk, saflığı tüm ailelerle paylaşma misyonuna dönüştü.",
+  image = "https://images.unsplash.com/photo-1544126592-807daa2b567b?auto=format&fit=crop&q=80&w=800"
+}) => {
   return (
     <section className="w-full max-w-[1200px] mx-auto px-4 md:px-10 py-16 grid md:grid-cols-2 gap-12 items-center">
       <motion.div 
@@ -10,12 +22,12 @@ export const AboutStory: React.FC = () => {
         viewport={{ once: true }}
         className="order-2 md:order-1"
       >
-        <h2 className="text-3xl font-bold mb-6 text-primary">Hikayemiz</h2>
+        <h2 className="text-3xl font-bold mb-6 text-primary">{title}</h2>
         <p className="text-lg leading-relaxed mb-6 text-slate-700">
-          MiniMüslin, en saf kumaşları arayan bir ebeveynin hayaliyle başladı. Her dokunuşun bir annenin kucağı kadar yumuşak olduğu bir dünya yaratmak istedik.
+          {content1}
         </p>
         <p className="text-lg leading-relaxed text-slate-700">
-          Sentetik karışımlardan ve sert boyalardan uzak durarak, en iyi GOTS sertifikalı organik pamuk üreticilerini bulmak için yola çıktık. Kendi bebeğimiz için küçük bir proje olarak başlayan bu yolculuk, saflığı tüm ailelerle paylaşma misyonuna dönüştü.
+          {content2}
         </p>
       </motion.div>
       <motion.div 
@@ -25,8 +37,8 @@ export const AboutStory: React.FC = () => {
         className="order-1 md:order-2"
       >
         <img 
-          src="https://images.unsplash.com/photo-1544126592-807daa2b567b?auto=format&fit=crop&q=80&w=800" 
-          alt="Mother holding baby" 
+          src={image} 
+          alt={title} 
           className="rounded-xl shadow-lg w-full h-[400px] object-cover"
           referrerPolicy="no-referrer"
         />
