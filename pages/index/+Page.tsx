@@ -9,6 +9,7 @@ import { useData } from 'vike-react/useData';
 export default function Page() {
   const data = useData() as any;
   const pageData = data?.pageData || {};
+  const acf = pageData.acf || {};
 
   return (
     <motion.div
@@ -17,8 +18,22 @@ export default function Page() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Hero {...pageData.hero} />
-      <FeaturedProducts {...pageData.featuredProducts} />
+      {/* Hero section - using fallback if not in ACF */}
+      <Hero {...acf.hero} />
+      
+      {/* Featured Products - mapped from WordPress ACF */}
+      <FeaturedProducts 
+        title={acf.baslik} 
+        subtitle={acf.alt_baslik} 
+        products={acf.koleksiyonlar?.map((item: any, index: number) => ({
+          id: index,
+          name: item.baslik,
+          category: item.alt_baslik,
+          image: item.urun_gorseli,
+          link: item.urun_linki
+        }))} 
+      />
+      
       <QualityStandards />
       <CombinedCTA />
     </motion.div>

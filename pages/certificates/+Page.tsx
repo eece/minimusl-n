@@ -7,6 +7,7 @@ import { useData } from 'vike-react/useData';
 export default function Page() {
   const data = useData() as any;
   const pageData = data?.pageData || {};
+  const acf = pageData.acf || {};
 
   return (
     <motion.div
@@ -15,7 +16,11 @@ export default function Page() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Certificates {...pageData} />
+      <Certificates 
+        title={acf.title} 
+        description={acf.description} 
+        sertifikalar_listesi={acf.sertifikalar_listesi} 
+      />
       <CombinedCTA />
     </motion.div>
   );

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 
 interface HeaderProps {
   logoText?: string;
+  logoImage?: string;
   navLinks?: Array<{ name: string; href: string }>;
   shopLink?: string;
   whatsappNumber?: string;
@@ -14,10 +15,11 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({
   logoText = "MiniMüslin",
+  logoImage,
   navLinks = [
-    { name: 'Koleksiyonlar', href: './' },
-    { name: 'Hakkımızda', href: './about' },
-    { name: 'Sertifikalar', href: './certificates' },
+    { name: 'Koleksiyonlar', href: '/' },
+    { name: 'Hakkımızda', href: '/about' },
+    { name: 'Sertifikalar', href: '/certificates' },
   ],
   shopLink = "https://www.shopier.com/minimuslin",
   whatsappNumber = "+90 500 000 00 00",
@@ -50,9 +52,13 @@ export const Header: React.FC<HeaderProps> = ({
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
             <div className="text-primary">
-              <Baby className="w-8 h-8" />
+              {logoImage ? (
+                <img src={logoImage} alt={logoText} className="h-10 w-auto object-contain" referrerPolicy="no-referrer" />
+              ) : (
+                <Baby className="w-8 h-8" />
+              )}
             </div>
-            <h1 className="text-xl font-bold tracking-tight text-slate-900">{logoText}</h1>
+            {!logoImage && <h1 className="text-xl font-bold tracking-tight text-slate-900">{logoText}</h1>}
           </a>
           
           <nav className="hidden md:flex items-center gap-8">

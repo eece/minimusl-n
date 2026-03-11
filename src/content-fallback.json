@@ -20,6 +20,12 @@
         "instagram": "https://instagram.com/minimuslin",
         "facebook": "#",
         "twitter": "#"
+      },
+      "contactInfo": {
+        "email": "hello@minimuslin.com",
+        "address": "İstanbul, Türkiye",
+        "phone": "+90 500 000 00 00",
+        "whatsappLink": "https://wa.me/905000000000"
       }
     }
   },
@@ -83,6 +89,33 @@
           "content": "Terlemeyi önleyen ve ısıyı dengeleyen özel nefes alabilir dokuma yapısı."
         }
       ]
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "subtitle": "Saflığa dayalı, özenle tasarlanmış ve gelecek nesiller için sürdürülebilir bir geleceğe adanmış.",
+      "items": [
+        {
+          "icon": "Leaf",
+          "title": "Önce Saflık",
+          "content": "Zararlı pestisitler olmadan yetiştirilen %100 organik pamuk, yenidoğan cildine en nazik dokunuşu sağlar."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "OEKO-TEX Sertifikalı",
+          "content": "Her iplik ve düğme, en yüksek küresel güvenlik standartlarını karşılayan zararlı maddeler için test edilir."
+        },
+        {
+          "icon": "Wind",
+          "title": "Nefes Alan Tasarım",
+          "content": "Özel müslin dokumamız havanın doğal olarak akmasını sağlayarak bebeklerin sıcaklıklarını düzenlemelerine yardımcı olur."
+        }
+      ]
+    },
+    "combinedCTA": {
+      "title": "MiniMüslin Dünyasını Keşfedin",
+      "subtitle": "Ürünlerimizi Trendyol’da inceleyin, yeni koleksiyonlar için Instagram’da bizi takip edin.",
+      "trendyolLink": "https://www.trendyol.com/magaza/minimuslin",
+      "instagramLink": "https://www.instagram.com/minimuslin"
     }
   },
   "about": {
@@ -91,6 +124,54 @@
       "content1": "MiniMüslin, en saf kumaşları arayan bir ebeveynin hayaliyle başladı. Her dokunuşun bir annenin kucağı kadar yumuşak olduğu bir dünya yaratmak istedik.",
       "content2": "Sentetik karışımlardan ve sert boyalardan uzak durarak, en iyi GOTS sertifikalı organik pamuk üreticilerini bulmak için yola çıktık. Kendi bebeğimiz için küçük bir proje olarak başlayan bu yolculuk, saflığı tüm ailelerle paylaşma misyonuna dönüştü.",
       "image": "https://images.unsplash.com/photo-1544126592-807daa2b567b?auto=format&fit=crop&q=80&w=800"
+    },
+    "qualityStandards": {
+      "title": "Kalite Standartlarımız",
+      "subtitle": "MiniMüslin olarak bebeğinizin sağlığını her şeyin önünde tutuyoruz.",
+      "items": [
+        {
+          "icon": "ShieldCheck",
+          "title": "OEKO-TEX Sertifikalı",
+          "content": "Uluslararası güvenlik standartlarına uygun, kimyasal içermeyen üretim."
+        },
+        {
+          "icon": "Leaf",
+          "title": "%100 Pamuk",
+          "content": "En yumuşak dokunuş için özenle seçilmiş, tamamen doğal saf pamuk."
+        },
+        {
+          "icon": "Wind",
+          "title": "Nefes Alan Doku",
+          "content": "Terlemeyi önleyen ve ısıyı dengeleyen özel nefes alabilir dokuma yapısı."
+        }
+      ]
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "subtitle": "Saflığa dayalı, özenle tasarlanmış ve gelecek nesiller için sürdürülebilir bir geleceğe adanmış.",
+      "items": [
+        {
+          "icon": "Leaf",
+          "title": "Önce Saflık",
+          "content": "Zararlı pestisitler olmadan yetiştirilen %100 organik pamuk, yenidoğan cildine en nazik dokunuşu sağlar."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "OEKO-TEX Sertifikalı",
+          "content": "Her iplik ve düğme, en yüksek küresel güvenlik standartlarını karşılayan zararlı maddeler için test edilir."
+        },
+        {
+          "icon": "Wind",
+          "title": "Nefes Alan Tasarım",
+          "content": "Özel müslin dokumamız havanın doğal olarak akmasını sağlayarak bebeklerin sıcaklıklarını düzenlemelerine yardımcı olur."
+        }
+      ]
+    },
+    "combinedCTA": {
+      "title": "MiniMüslin Dünyasını Keşfedin",
+      "subtitle": "Ürünlerimizi Trendyol’da inceleyin, yeni koleksiyonlar için Instagram’da bizi takip edin.",
+      "trendyolLink": "https://www.trendyol.com/magaza/minimuslin",
+      "instagramLink": "https://www.instagram.com/minimuslin"
     }
   },
   "certificates": {

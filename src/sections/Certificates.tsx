@@ -12,6 +12,12 @@ interface CertificateSection {
 interface CertificatesProps {
   title?: string;
   description?: string;
+  sertifikalar_listesi?: Array<{
+    baslik: string;
+    icon: string;
+    aciklama: string;
+    liste: Array<{ liste_item: string }>;
+  }>;
   [key: string]: any; // To allow section1, section2, etc.
 }
 
@@ -23,20 +29,34 @@ const DynamicIcon = ({ name, className }: { name: string, className?: string }) 
 export const Certificates: React.FC<CertificatesProps> = (props) => {
   const {
     title = "Sertifikalarımız ve Kalite Standartlarımız",
-    description = "MiniMüslin olarak, bebeklerinizin sağlığı için en yüksek kalite ve güvenlik standartlarını benimsiyoruz."
+    description = "MiniMüslin olarak, bebeklerinizin sağlığı için en yüksek kalite ve güvenlik standartlarını benimsiyoruz.",
+    sertifikalar_listesi = []
   } = props;
 
-  // Extract sections from section1 to section10
+  // Extract sections from WordPress repeater or fallback to section1-10
   const sections: CertificateSection[] = [];
-  for (let i = 1; i <= 10; i++) {
-    const section = props[`section${i}`];
-    if (section && section.title) {
+  
+  if (sertifikalar_listesi && sertifikalar_listesi.length > 0) {
+    sertifikalar_listesi.forEach(item => {
       sections.push({
-        title: section.title,
-        description: section.description || '',
-        listItems: Array.isArray(section.listItems) ? section.listItems : [],
-        icon: section.icon || 'ShieldCheck'
+        title: item.baslik,
+        description: item.aciklama,
+        listItems: item.liste?.map(l => l.liste_item) || [],
+        icon: item.icon
       });
+    });
+  } else {
+    // Fallback to section1-10
+    for (let i = 1; i <= 10; i++) {
+      const section = props[`section${i}`];
+      if (section && section.title) {
+        sections.push({
+          title: section.title,
+          description: section.description || '',
+          listItems: Array.isArray(section.listItems) ? section.listItems : [],
+          icon: section.icon || 'ShieldCheck'
+        });
+      }
     }
   }
 

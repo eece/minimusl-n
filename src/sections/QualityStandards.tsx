@@ -22,7 +22,8 @@ const DynamicIcon = ({ name, className }: { name: string, className?: string }) 
 export const QualityStandards: React.FC<QualityStandardsProps> = (props) => {
   const data = useData() as any;
   const pageData = data?.pageData || {};
-  const qualityData = pageData.qualityStandards || {};
+  const acf = pageData.acf || {};
+  const qualityData = acf.quality_standards || pageData.qualityStandards || {};
 
   const title = props.title || qualityData.title || "Kalite Standartlarımız";
   const subtitle = props.subtitle || qualityData.subtitle || "MiniMüslin olarak bebeğinizin sağlığını her şeyin önünde tutuyoruz.";
